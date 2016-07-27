@@ -20,6 +20,19 @@
 		</div>
 	</div>
 
+	<!-- <select id="player1">
+		<option value="donny">Donny</option>
+		<option value="Mikey">Mikey</option>
+		<option value="Leo">Leo</option>
+		<option value="Raphael">Raphael</option>
+	</select>
+	<select id="player2">
+		<option value="donny">Donny</option>
+		<option value="Mikey">Mikey</option>
+		<option value="Leo">Leo</option>
+		<option value="Raphael">Raphael</option>
+	</select>
+ -->
 	<script>
 		$(document).ready(function(){
 			$("button").mouseover(function(){
@@ -38,26 +51,40 @@
 					$("#container").css("background-image", "url('dojo_arena_photos/snow.jpg')");
 				}						
 			});
-		$("button").click(function(){
-				// console.log(this.id);
-				if(this.id == "beach"){
-					$("#container").css("background-image", "url('dojo_arena_photos/beach.jpg')");
-				}else if(this.id == "planet"){
-					$("#container").css("background-image", "url('dojo_arena_photos/earth.jpg')");
-				}else if(this.id == "dojo"){
-					$("#container").css("background-image", "url('dojo_arena_photos/dojo.jpg')");
-				}else if(this.id == "forest"){
-					$("#container").css("background-image", "url('dojo_arena_photos/forest.jpg')");
-				}else if(this.id == "matrix"){
-					$("#container").css("background-image", "url('dojo_arena_photos/matrix.jpg')");
-				}else if(this.id == "snow"){
-					$("#container").css("background-image", "url('dojo_arena_photos/snow.jpg')");
-				}						
+
+			$("button").click(function(){
+				document.getElementById("menu").innerHTML = '<h1>Select Players</h1><select id="player1"><option value="donny">Donny</option><option value="Mikey">Mikey</option><option value="Leo">Leo</option><option value="Raphael">Raphael</option></select><select id="player2"><option value="donny">Donny</option><option value="Mikey">Mikey</option><option value="Leo">Leo</option><option value="Raphael">Raphael</option></select>';
 			});
 
+			$(document).on(function(){
+				$('#player1').change(function(){
+					var val = $(this).value;
+					console.log(val);
+					if(val == 'donny'){
 
+					}
+				});
+
+				$('#player2').onchange(function(){
+
+				});
+		// <option value="donny">Donny</option>
+		// <option value="Mikey">Mikey</option>
+		// <option value="Leo">Leo</option>
+		// <option value="Raphael">Raphael</option>
+			});
 		});
 
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
