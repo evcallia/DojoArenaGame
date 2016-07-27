@@ -11,28 +11,19 @@
 	<div id="container">
 		<div id="menu">
 			<h1>Select Arena</h1>
-			<button id="beach">beach</button>
-			<button id="planet">planet</button>
-			<button id="dojo">dojo</button>
-			<button id="forest">forest</button>
-			<button id="matrix">matrix</button>
-			<button id="snow">snow</button>
+			<div id="buttons">
+				<button id="beach">beach</button>
+				<button id="planet">planet</button>
+				<button id="dojo">dojo</button>
+				<button id="forest">forest</button>
+				<button id="matrix">matrix</button>
+				<button id="snow">snow</button>
+			</div>
 		</div>
+		<div id="player1_location"></div>
+		<div id="player2_location"></div>
 	</div>
 
-	<!-- <select id="player1">
-		<option value="donny">Donny</option>
-		<option value="Mikey">Mikey</option>
-		<option value="Leo">Leo</option>
-		<option value="Raphael">Raphael</option>
-	</select>
-	<select id="player2">
-		<option value="donny">Donny</option>
-		<option value="Mikey">Mikey</option>
-		<option value="Leo">Leo</option>
-		<option value="Raphael">Raphael</option>
-	</select>
- -->
 	<script>
 		$(document).ready(function(){
 			$("button").mouseover(function(){
@@ -53,25 +44,39 @@
 			});
 
 			$("button").click(function(){
-				document.getElementById("menu").innerHTML = '<h1>Select Players</h1><select id="player1"><option value="donny">Donny</option><option value="Mikey">Mikey</option><option value="Leo">Leo</option><option value="Raphael">Raphael</option></select><select id="player2"><option value="donny">Donny</option><option value="Mikey">Mikey</option><option value="Leo">Leo</option><option value="Raphael">Raphael</option></select>';
+				document.getElementById("menu").innerHTML = '<h1>Select Players</h1><select id="player1"><option value="empty">Select Ninja</option><option value="donny">Donny</option><option value="Mikey">Mikey</option><option value="Leo">Leo</option><option value="Raphael">Raphael</option></select><select id="player2"><option value="empty">Select Ninja</option><option value="donny">Donny</option><option value="Mikey">Mikey</option><option value="Leo">Leo</option><option value="Raphael">Raphael</option></select>';
 			});
 
-			$(document).on(function(){
-				$('#player1').change(function(){
-					var val = $(this).value;
-					console.log(val);
-					if(val == 'donny'){
+			$(document).on('change', '#player1', function(){
+				var val = this.value;
+				// console.log(val);
+				if (val == 'empty'){
+					$('#player1_location').css('background-image', 'url()')
+				}else if(val == 'donny'){
+					$('#player1_location').css('background-image', 'url(dojo_arena_photos/donny.png)')
+				}else if(val == 'Mikey'){
+					$('#player1_location').css('background-image', 'url(dojo_arena_photos/mikey.png)')
+				}else if(val == 'Leo'){
+					$('#player1_location').css('background-image', 'url(dojo_arena_photos/leo.png)')
+				}else if(val == 'Raphael'){
+					$('#player1_location').css('background-image', 'url(dojo_arena_photos/raphael.png)')
+				};
+			});
 
-					}
-				});
-
-				$('#player2').onchange(function(){
-
-				});
-		// <option value="donny">Donny</option>
-		// <option value="Mikey">Mikey</option>
-		// <option value="Leo">Leo</option>
-		// <option value="Raphael">Raphael</option>
+			$(document).on('change', '#player2', function(){
+				var val = this.value;
+				// console.log(val);
+				if (val == 'empty'){
+					$('#player2_location').css('background-image', 'url()')
+				}else if(val == 'donny'){
+					$('#player2_location').css('background-image', 'url(dojo_arena_photos/donny.png)')
+				}else if(val == 'Mikey'){
+					$('#player2_location').css('background-image', 'url(dojo_arena_photos/mikey.png)')
+				}else if(val == 'Leo'){
+					$('#player2_location').css('background-image', 'url(dojo_arena_photos/leo.png)')
+				}else if(val == 'Raphael'){
+					$('#player2_location').css('background-image', 'url(dojo_arena_photos/raphael.png)')
+				};
 			});
 		});
 
