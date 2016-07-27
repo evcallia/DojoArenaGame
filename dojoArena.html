@@ -5,7 +5,7 @@
 	<title>Dojo Arena</title>
 	<meta name="description" content="Group programming the into to the Dojo Arena game">
 	<link rel="stylesheet" type="text/css" href="dojoArena.css">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -21,7 +21,43 @@
 	</div>
 
 	<script>
-		
+		$(document).ready(function(){
+			$("button").mouseover(function(){
+				// console.log(this.id);
+				if(this.id == "beach"){
+					$("#container").css("background-image", "url('dojo_arena_photos/beach.jpg')");
+				}else if(this.id == "planet"){
+					$("#container").css("background-image", "url('dojo_arena_photos/earth.jpg')");
+				}else if(this.id == "dojo"){
+					$("#container").css("background-image", "url('dojo_arena_photos/dojo.jpg')");
+				}else if(this.id == "forest"){
+					$("#container").css("background-image", "url('dojo_arena_photos/forest.jpg')");
+				}else if(this.id == "matrix"){
+					$("#container").css("background-image", "url('dojo_arena_photos/matrix.jpg')");
+				}else if(this.id == "snow"){
+					$("#container").css("background-image", "url('dojo_arena_photos/snow.jpg')");
+				}						
+			});
+		$("button").click(function(){
+				// console.log(this.id);
+				if(this.id == "beach"){
+					$("#container").css("background-image", "url('dojo_arena_photos/beach.jpg')");
+				}else if(this.id == "planet"){
+					$("#container").css("background-image", "url('dojo_arena_photos/earth.jpg')");
+				}else if(this.id == "dojo"){
+					$("#container").css("background-image", "url('dojo_arena_photos/dojo.jpg')");
+				}else if(this.id == "forest"){
+					$("#container").css("background-image", "url('dojo_arena_photos/forest.jpg')");
+				}else if(this.id == "matrix"){
+					$("#container").css("background-image", "url('dojo_arena_photos/matrix.jpg')");
+				}else if(this.id == "snow"){
+					$("#container").css("background-image", "url('dojo_arena_photos/snow.jpg')");
+				}						
+			});
+
+
+		});
+
 	</script>
 </body>
 </html>
