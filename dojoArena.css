@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0 auto;
+}
+
+h1{
+	padding-top: 30px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+#container{
+	width: 900px;
+	background-color: black;
+	height: 700px;
+}
+
+#menu{
+	background-color: grey;
+	width: 300px;
+}
+
+#menu button{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	// align center
+}
+
+
+
+
+
